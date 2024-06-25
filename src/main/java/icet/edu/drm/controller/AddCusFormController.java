@@ -89,7 +89,6 @@ public class AddCusFormController implements Initializable {
         Customer customer = customerBoImpl.getCusById(txtId.getText());
         txtName.setText(customer.getName());
         txtEmail.setText(customer.getEmail());
-
         txtAddress.setText(customer.getAddress());
     }
 
@@ -179,7 +178,8 @@ public class AddCusFormController implements Initializable {
         sceneSwitch.switchScene(Anchor, "AddCusFormController.fxml");
     }
 
-    public void ProductAction(ActionEvent actionEvent) {
+    public void ProductAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "AddProductFormController.fxml");
 
 
     }

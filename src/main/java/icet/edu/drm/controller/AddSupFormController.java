@@ -2,7 +2,6 @@ package icet.edu.drm.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import icet.edu.drm.bo.custom.impl.SupplierBoImpl;
-import icet.edu.drm.model.Customer;
 import icet.edu.drm.model.Supplier;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -11,7 +10,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -155,8 +153,8 @@ public class AddSupFormController implements Initializable {
     }
 
 
-    public void ProductAction(ActionEvent actionEvent) {
-
+    public void ProductAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "AddProductFormController.fxml");
     }
 
     public void CusAction(ActionEvent actionEvent) throws IOException {

@@ -35,13 +35,14 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <TableView fx:id="Table1" layoutX="232.0" layoutY="298.0" prefHeight="181.0" prefWidth="510.0">
+            <TableView fx:id="Table1" layoutX="214.0" layoutY="293.0" prefHeight="182.0" prefWidth="546.0">
                <columns>
-                  <TableColumn fx:id="colId" prefWidth="93.5999755859375" text="Product Id" />
-                  <TableColumn fx:id="colName" prefWidth="135.99993896484375" text="Product Name" />
-                  <TableColumn fx:id="ColSize" prefWidth="116.800048828125" text="Product Size " />
-                  <TableColumn fx:id="ColQty" prefWidth="77.5999755859375" text="Qty" />
-            <TableColumn fx:id="ColSupId" prefWidth="86.4000244140625" text="SupID" />
+                  <TableColumn fx:id="colId" text="Product Id" />
+                  <TableColumn fx:id="colName" prefWidth="104.79998779296875" text="Product Name" />
+                  <TableColumn fx:id="ColSize" prefWidth="108.00006103515625" text="Product Size " />
+                  <TableColumn fx:id="ColQty" prefWidth="70.4000244140625" text="Qty" />
+            <TableColumn fx:id="ColSupId" prefWidth="88.0" text="SupID" />
+            <TableColumn fx:id="colPrice" prefWidth="105.5999755859375" text="Price per 1" />
                </columns>
             </TableView>
             <Button layoutX="686.0" layoutY="67.0" mnemonicParsing="false" onAction="#AddAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">

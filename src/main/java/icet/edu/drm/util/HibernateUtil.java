@@ -1,6 +1,7 @@
 package icet.edu.drm.util;
 
 import icet.edu.drm.entity.CustomerEntity;
+import icet.edu.drm.entity.ProductEntity;
 import icet.edu.drm.entity.SupplierEntity;
 import icet.edu.drm.entity.UserEntity;
 import org.hibernate.Session;
@@ -22,7 +23,7 @@ public class HibernateUtil {
                 .addAnnotatedClass(UserEntity.class)
                 .addAnnotatedClass(CustomerEntity.class)
                 .addAnnotatedClass(SupplierEntity.class)
-               // .addAnnotatedClass(ProductEntity.class)
+                .addAnnotatedClass(ProductEntity.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();
