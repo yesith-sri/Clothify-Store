@@ -150,7 +150,6 @@ public class AddCusFormController implements Initializable {
         }
     }
 
-
     public void clear(){
 
         txtId.setText("");
@@ -159,16 +158,11 @@ public class AddCusFormController implements Initializable {
         txtAddress.setText("");
     }
 
-
-
-
-
     public void SupplierAction(ActionEvent actionEvent) throws IOException {
 
         sceneSwitch.switchScene(Anchor, "AddSupFormController.fxml");
 
     }
-
 
     public void PlaceAction(ActionEvent actionEvent) throws IOException {
         sceneSwitch.switchScene(Anchor, "placeOrder.fxml");
@@ -181,8 +175,6 @@ public class AddCusFormController implements Initializable {
 
     public void ProductAction(ActionEvent actionEvent) throws IOException {
         sceneSwitch.switchScene(Anchor, "AddProductFormController.fxml");
-
-
     }
 
     public void log(ActionEvent actionEvent) throws IOException {

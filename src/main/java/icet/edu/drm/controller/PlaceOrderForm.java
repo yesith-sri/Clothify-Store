@@ -3,10 +3,7 @@ package icet.edu.drm.controller;
 import icet.edu.drm.bo.custom.impl.CustomerBoImpl;
 import icet.edu.drm.bo.custom.impl.OrderBoImpl;
 import icet.edu.drm.bo.custom.impl.ProductBoImpl;
-import icet.edu.drm.model.CarTbl;
-import icet.edu.drm.model.Customer;
-import icet.edu.drm.model.Product;
-import icet.edu.drm.model.Supplier;
+import icet.edu.drm.model.*;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -21,6 +18,8 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
@@ -169,10 +168,9 @@ public class PlaceOrderForm implements Initializable {
         tblCart.setItems(cartList);
         calcNetTotal();
     }
-
+    double ttl = 0;
     private void calcNetTotal() {
 
-        double ttl = 0;
         for (CarTbl cartObj : cartList) {
             ttl += cartObj.getTotal();
         }
@@ -182,10 +180,31 @@ public class PlaceOrderForm implements Initializable {
     public void txtAddtoCartOnAction(ActionEvent actionEvent) {
     }
 
-    public void btnPlaceOrderOnAction(ActionEvent actionEvent) {
+    public void btnPlaceOrderOnAction(ActionEvent actionEvent) throws ParseException, IOException {
+
+        String id = lblOrderId.getText();
+        String Cusid =cmbCustomerIDs.getValue().toString();
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date orderDate = format.parse(lblDate.getText());
+        double amount = ttl;
+
+        Order order = new Order(
+                id,Cusid,orderDate,amount
+        );
+
+        boolean isInsert = orderBoImpl.insertOrder(order);
+        if (isInsert) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Order Placed");
+            alert.setContentText("Order Placed Successfully..!");
+            alert.showAndWait();
+            sceneSwitch.switchScene(Anchor, "placeOrder.fxml");
+
+
+    } else {
+        new Alert(Alert.AlertType.ERROR, "Somthing Wrong..!!!").show();
     }
-
-
+    }
 
 
 

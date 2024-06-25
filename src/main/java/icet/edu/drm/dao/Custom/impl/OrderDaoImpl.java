@@ -20,7 +20,14 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public boolean insert(OrderEntity orderEntity) {
-        return false;
+
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+
+        session.persist(orderEntity);
+        session.getTransaction().commit();
+        session.close();
+        return true;
     }
 
     @Override

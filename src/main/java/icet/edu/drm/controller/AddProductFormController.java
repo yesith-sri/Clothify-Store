@@ -204,7 +204,8 @@ public class AddProductFormController implements Initializable {
         sceneSwitch.switchScene(Anchor2, "AddCusFormController.fxml");
     }
 
-    public void PlaceAction(ActionEvent actionEvent) {
+    public void PlaceAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor2, "placeOrder.fxml");
     }
 
     public void SupplierAction(ActionEvent actionEvent) throws IOException {

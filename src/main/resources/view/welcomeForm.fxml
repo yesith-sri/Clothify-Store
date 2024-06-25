@@ -7,36 +7,36 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="welcomeAnchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.welcomeFormController">
+<AnchorPane fx:id="welcomeAnchor" prefHeight="490.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.welcomeFormController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="186.0" layoutY="38.0" text="Welcome To Clothify" textFill="#82589f">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="271.0" layoutY="38.0" text="Welcome To Clothify" textFill="#82589f">
          <font>
-            <Font name="System Bold" size="23.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtUserName" layoutX="201.0" layoutY="117.0" onKeyReleased="#emailKeyReleasedAction" prefHeight="26.0" prefWidth="198.0" promptText="User Name :">
+      <JFXTextField fx:id="txtUserName" layoutX="283.0" layoutY="144.0" onKeyReleased="#emailKeyReleasedAction" prefHeight="26.0" prefWidth="198.0" promptText="User Name :">
          <font>
-            <Font size="13.0" />
+            <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtPassword" layoutX="201.0" layoutY="188.0" prefHeight="26.0" prefWidth="198.0" promptText="Password : ">
+      <JFXTextField fx:id="txtPassword" layoutX="283.0" layoutY="215.0" prefHeight="26.0" prefWidth="198.0" promptText="Password : ">
          <font>
-            <Font size="13.0" />
+            <Font size="14.0" />
          </font>
       </JFXTextField>
-      <Button layoutX="260.0" layoutY="253.0" mnemonicParsing="false" onAction="#SignAction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #25CCF7;" text="Sign in">
+      <Button layoutX="338.0" layoutY="294.0" mnemonicParsing="false" onAction="#SignAction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: #25CCF7;" text="Sign in">
          <font>
-            <Font size="13.0" />
+            <Font size="14.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="133.0" layoutY="307.0" onAction="#forgetAction" prefHeight="24.0" prefWidth="106.0" text="Forget Password">
+      <Hyperlink layoutX="168.0" layoutY="344.0" onAction="#forgetAction" prefHeight="26.0" prefWidth="124.0" text="Forget Password">
          <font>
-            <Font size="13.0" />
+            <Font size="14.0" />
          </font>
       </Hyperlink>
-      <Hyperlink contentDisplay="CENTER" layoutX="373.0" layoutY="306.0" onAction="#NeedAction" prefHeight="26.0" prefWidth="79.0" text="Need Help ?">
+      <Hyperlink contentDisplay="CENTER" layoutX="527.0" layoutY="344.0" onAction="#NeedAction" prefHeight="26.0" prefWidth="88.0" text="Need Help ?">
          <font>
-            <Font size="13.0" />
+            <Font size="14.0" />
          </font>
       </Hyperlink>
    </children>
