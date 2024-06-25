@@ -170,7 +170,8 @@ public class AddCusFormController implements Initializable {
     }
 
 
-    public void PlaceAction(ActionEvent actionEvent) {
+    public void PlaceAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "placeOrder.fxml");
     }
 
     public void CusAction(ActionEvent actionEvent) throws IOException {

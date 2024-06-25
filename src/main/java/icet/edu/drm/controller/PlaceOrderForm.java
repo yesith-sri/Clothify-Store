@@ -3,6 +3,7 @@ package icet.edu.drm.controller;
 import icet.edu.drm.bo.custom.impl.CustomerBoImpl;
 import icet.edu.drm.bo.custom.impl.OrderBoImpl;
 import icet.edu.drm.bo.custom.impl.ProductBoImpl;
+import icet.edu.drm.model.CarTbl;
 import icet.edu.drm.model.Customer;
 import icet.edu.drm.model.Product;
 import icet.edu.drm.model.Supplier;
@@ -14,13 +15,16 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class PlaceOrderForm implements Initializable {
@@ -59,6 +63,8 @@ public class PlaceOrderForm implements Initializable {
     OrderBoImpl orderBoImpl = new OrderBoImpl();
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
+    SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -73,6 +79,15 @@ public class PlaceOrderForm implements Initializable {
         cmbItemCode.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             setItemDataFroLbl((String) newValue);
         });
+
+        lblOrderId.setText(orderBoImpl.generateOrderId());
+
+
+        colItemCode.setCellValueFactory(new PropertyValueFactory<>("itemCode"));
+        colDesc.setCellValueFactory(new PropertyValueFactory<>("desc"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
     }
 
     private void setItemDataFroLbl(String ItemCode) {
@@ -91,8 +106,6 @@ public class PlaceOrderForm implements Initializable {
         lblEmail.setText(customer.getEmail());
         lblAddress.setText(customer.getAddress());
     }
-
-
 
     private void loadItemCodes() {
 
@@ -139,10 +152,31 @@ public class PlaceOrderForm implements Initializable {
         timeline.play();
     }
 
+    ObservableList<CarTbl> cartList = FXCollections.observableArrayList();
+
+
     public void btnAddToCartOnAction(ActionEvent actionEvent) {
+
+        String itemCode = (String) cmbItemCode.getValue();
+        String desc = lblDesc.getText();
+        Integer qtyFroCustomer = Integer.parseInt(txtQtyFroCustomer.getText());
+        Double unitPrice = Double.valueOf(lblUnitPrice.getText());
+        Double total = qtyFroCustomer * unitPrice;
+        CarTbl cartTbl = new CarTbl(itemCode, desc, qtyFroCustomer, unitPrice, total, 0.0);
+        System.out.println(cartTbl);
+
+        cartList.add(cartTbl);
+        tblCart.setItems(cartList);
+        calcNetTotal();
     }
 
-    public void btnClearOnAction(ActionEvent actionEvent) {
+    private void calcNetTotal() {
+
+        double ttl = 0;
+        for (CarTbl cartObj : cartList) {
+            ttl += cartObj.getTotal();
+        }
+        lblNetTotal.setText(String.valueOf(ttl) + "/=");
     }
 
     public void txtAddtoCartOnAction(ActionEvent actionEvent) {
@@ -155,19 +189,33 @@ public class PlaceOrderForm implements Initializable {
 
 
 
-    public void ProductAction(ActionEvent actionEvent) {
+    public void ProductAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "AddProductFormController.fxml");
+
     }
 
-    public void CusAction(ActionEvent actionEvent) {
+    public void CusAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "AddCusFormController.fxml");
     }
 
-    public void PlaceAction(ActionEvent actionEvent) {
+    public void PlaceAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "placeOrder.fxml");
     }
 
-    public void SupplierAction(ActionEvent actionEvent) {
+    public void SupplierAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "AddSupFormController.fxml");
+
     }
 
-    public void log(ActionEvent actionEvent) {
+    public void log(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(Anchor,"welcomeForm.fxml");
+        }
     }
 
 
