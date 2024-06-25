@@ -4,5 +4,5 @@ import icet.edu.drm.dao.CrudDao;
 import icet.edu.drm.entity.OrderEntity;
 import icet.edu.drm.entity.ProductEntity;
 
-public interface ProductDao extends CrudDao<ProductEntity,String> {
+public interface OrderDao extends CrudDao<OrderEntity,String> {
 }

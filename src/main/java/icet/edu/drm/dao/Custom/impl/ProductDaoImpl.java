@@ -49,7 +49,7 @@ public class ProductDaoImpl implements ProductDao {
     public boolean update(ProductEntity productEntity) {
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
-        Query query = session.createQuery("UPDATE product SET name =:name,qty =:qty,size =:size ,price= :price , supId= :supId WHERE id =:id");
+        Query query = session.createQuery("UPDATE product SET name =:name,qty =:qty,size =:size ,price= :price ,supId =:supId WHERE id =:id");
         query.setParameter("id",productEntity.getId());
         query.setParameter("name",productEntity.getName());
         query.setParameter("qty",productEntity.getQty());
@@ -62,6 +62,8 @@ public class ProductDaoImpl implements ProductDao {
         session.getTransaction().commit();
         session.close();
         return i>0;
+
+
     }
 
     @Override

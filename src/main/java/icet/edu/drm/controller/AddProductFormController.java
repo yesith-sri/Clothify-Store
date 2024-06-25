@@ -125,7 +125,6 @@ public class AddProductFormController implements Initializable {
         txtName.setText(product.getName());
         txtQty.setText(String.valueOf(product.getQty()));
         txtprice.setText(String.valueOf(product.getPrice()));
-        txtName.setText(product.getName());
         cmb.setValue(product.getSize());
         cmbSup.setValue(product.getSupId());
     }
