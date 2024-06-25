@@ -2,6 +2,8 @@ package icet.edu.drm.controller;
 
 import com.jfoenix.controls.JFXTextField;
 import icet.edu.drm.bo.custom.impl.ProductBoImpl;
+import icet.edu.drm.bo.custom.impl.SupplierBoImpl;
+import icet.edu.drm.model.Supplier;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -36,12 +38,26 @@ public class AddProductFormController implements Initializable {
 
 
     ProductBoImpl productBoImpl = new ProductBoImpl();
+    SupplierBoImpl supplierBoImpl = new SupplierBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadDropMenu();
+        loadSuplierIds();
 
+    }
+
+    private void loadSuplierIds() {
+
+        ObservableList<Supplier> allSupplier = supplierBoImpl.getAllSupplier();
+        ObservableList ids = FXCollections.observableArrayList();
+
+        allSupplier.forEach(supplier -> {
+            ids.add(supplier.getId());
+
+        });
+        cmbSup.setItems(ids);
     }
 
     private void loadDropMenu() {
