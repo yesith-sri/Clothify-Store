@@ -22,9 +22,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
-import java.util.Date;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class PlaceOrderForm implements Initializable {
 
@@ -63,7 +61,6 @@ public class PlaceOrderForm implements Initializable {
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -153,7 +150,6 @@ public class PlaceOrderForm implements Initializable {
 
     ObservableList<CarTbl> cartList = FXCollections.observableArrayList();
 
-
     public void btnAddToCartOnAction(ActionEvent actionEvent) {
 
         String itemCode = (String) cmbItemCode.getValue();
@@ -167,6 +163,8 @@ public class PlaceOrderForm implements Initializable {
         cartList.add(cartTbl);
         tblCart.setItems(cartList);
         calcNetTotal();
+
+
     }
     double ttl = 0;
     private void calcNetTotal() {
@@ -188,9 +186,20 @@ public class PlaceOrderForm implements Initializable {
         Date orderDate = format.parse(lblDate.getText());
         double amount = ttl;
 
-        Order order = new Order(
-                id,Cusid,orderDate,amount
-        );
+        ObservableList<OrderHasItem> orderHasItemObservableList =FXCollections.observableArrayList();
+
+//        for (CarTbl cartTbl : cartList) {
+//            String oID = lblOrderId.getText();
+//            String itemCode = cartTbl.getItemCode();
+//            Integer qty = cartTbl.getQty();
+//            Double discount = cartTbl.getDiscount();
+//            orderHasItemObservableList.add(new OrderHasItem(oID, itemCode, qty, discount)) ;
+//
+//        }
+//
+//        boolean b = orderBoImpl.saveOrderDetails(orderHasItemObservableList);
+
+        Order order = new Order(id,Cusid,orderDate,amount );
 
         boolean isInsert = orderBoImpl.insertOrder(order);
         if (isInsert) {

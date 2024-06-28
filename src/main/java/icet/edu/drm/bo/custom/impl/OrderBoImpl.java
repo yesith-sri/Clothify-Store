@@ -6,7 +6,9 @@ import icet.edu.drm.dao.Custom.impl.OrderDaoImpl;
 import icet.edu.drm.dao.DaoFactory;
 import icet.edu.drm.entity.OrderEntity;
 import icet.edu.drm.model.Order;
+import icet.edu.drm.model.OrderHasItem;
 import icet.edu.drm.util.DaoType;
+import javafx.collections.ObservableList;
 
 public class OrderBoImpl implements OrderBo {
 
@@ -30,5 +32,9 @@ public class OrderBoImpl implements OrderBo {
 
         OrderEntity orderEntity = new ObjectMapper().convertValue(order, OrderEntity.class);
         return orderDaoImpl.insert(orderEntity);
+    }
+
+    public boolean saveOrderDetails(ObservableList<OrderHasItem> orderHasItemObservableList) {
+        return orderDaoImpl.saveAll(orderHasItemObservableList);
     }
 }

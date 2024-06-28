@@ -1,28 +1,23 @@
 package icet.edu.drm.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "order_table")
-@Table(name = "order_table")
-public class OrderEntity {
+@Entity(name = "order_details")
+@Table(name = "order_details")
+public class OrderHasItemEntity {
 
-    @Id
-    private String id;
-    private String cusId;
-    private Date date;
-    private double amount;
-
+    private String orderId;
+    private String itemCode;
+    private Integer qty;
+    private Double discount;
 
 }

@@ -22,7 +22,6 @@ public class DaoFactory {
             case PRODUCT:return (T)new ProductDaoImpl();
             case ORDER:return (T)new OrderDaoImpl();
 
-
         }
         return null;
     }

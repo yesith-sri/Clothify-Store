@@ -1,13 +1,20 @@
 package icet.edu.drm.dao.Custom.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import icet.edu.drm.dao.Custom.OrderDao;
+import icet.edu.drm.dao.DaoFactory;
 import icet.edu.drm.entity.OrderEntity;
+import icet.edu.drm.entity.OrderHasItemEntity;
+import icet.edu.drm.model.OrderHasItem;
+import icet.edu.drm.util.DaoType;
 import icet.edu.drm.util.HibernateUtil;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 public class OrderDaoImpl implements OrderDao {
+
+   // OrderDaoImpl orderDao = DaoFactory.getInstance().getDao(DaoType. ORDER);
     @Override
     public OrderEntity search(String s) {
         return null;
@@ -48,5 +55,26 @@ public class OrderDaoImpl implements OrderDao {
         String id = (String) query.uniqueResult();
         session.close();
         return id;
+    }
+
+    public boolean saveAll(ObservableList<OrderHasItem> orderHasItemObservableList) {
+
+
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+
+        orderHasItemObservableList.forEach(orderHasItem -> {
+            OrderHasItemEntity orderHasItemEntity = new ObjectMapper().convertValue(orderHasItem, OrderHasItemEntity.class);
+
+           // orderDao.updateQty(orderHasItemEntity.getItemCode(),orderHasItemEntity.getQty());
+            session.persist(orderHasItemEntity);
+        });
+        session.getTransaction().commit();
+        session.close();
+        return true;
+    }
+
+    private void updateQty(String itemCode, Integer qty) {
+
     }
 }
