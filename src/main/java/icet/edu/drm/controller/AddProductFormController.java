@@ -151,6 +151,8 @@ public class AddProductFormController implements Initializable {
                     cmb.setValue("");
                     cmbSup.setValue("");
                     txtId.setText(productBoImpl.generateProId());
+                    txtId.setText(productBoImpl.generateProId());
+
                 }
             }
         }
