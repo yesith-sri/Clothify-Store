@@ -258,15 +258,9 @@ j
 :src/main/java/icet/edu/drm/bo/custom/impl/OrderBoImpl.java,4\7\47f4999cb963d97e4b34dfa8fd12fa36c7d20e9d
 \
 ,src/main/java/icet/edu/drm/model/CarTbl.java,a\e\ae3414dd12de9e0cde8b93ffa0b755f40478cfc9
-q
-Asrc/main/java/icet/edu/drm/bo/custom/impl/OrderDetailsBoImpl.java,d\d\dd122318e0c4486a12ae4597b623952268d2092e
-h
-8src/main/java/icet/edu/drm/bo/custom/OrderDetailsBo.java,c\8\c8f0f7aebce4458688149dc996623775cb7e0252
-s
-Csrc/main/java/icet/edu/drm/dao/Custom/impl/OrderDetailsDaoImpl.java,1\1\11ba0a24a5758c9e7973bd29357048661e55608d
-j
-:src/main/java/icet/edu/drm/dao/Custom/OrderDetailsDao.java,0\5\055e6453a4846365f49a4c70815f657544c86939
 i
 9src/main/java/icet/edu/drm/entity/OrderHasItemEntity.java,1\5\150bcac9138dd134e0698043a6b55860e2ef0155
 b
 2src/main/java/icet/edu/drm/model/OrderHasItem.java,4\0\4046a827a09e46939a0dfdd6a5424e6347ffde41
+s
+Csrc/main/java/icet/edu/drm/controller/PlaceOrderFormController.java,a\6\a6791451126933fe2efc2ee797f13267d1e711fe

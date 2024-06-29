@@ -57,18 +57,11 @@ public class OrderDaoImpl implements OrderDao {
         return id;
     }
 
-    public boolean saveAll(ObservableList<OrderHasItem> orderHasItemObservableList) {
-
-
+    public boolean saveAll(OrderHasItemEntity orderHasItemEntity) {
         Session session = HibernateUtil.getSession();
         session.getTransaction().begin();
 
-        orderHasItemObservableList.forEach(orderHasItem -> {
-            OrderHasItemEntity orderHasItemEntity = new ObjectMapper().convertValue(orderHasItem, OrderHasItemEntity.class);
-
-           // orderDao.updateQty(orderHasItemEntity.getItemCode(),orderHasItemEntity.getQty());
-            session.persist(orderHasItemEntity);
-        });
+        session.persist(orderHasItemEntity);
         session.getTransaction().commit();
         session.close();
         return true;

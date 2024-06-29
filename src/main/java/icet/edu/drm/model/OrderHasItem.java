@@ -12,6 +12,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OrderHasItem {
 
+    private Integer id;
+    
     private String orderId;
     private String itemCode;
     private Integer qty;

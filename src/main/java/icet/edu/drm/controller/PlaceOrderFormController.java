@@ -24,7 +24,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.*;
 
-public class PlaceOrderForm implements Initializable {
+public class PlaceOrderFormController implements Initializable {
 
 
     public AnchorPane Anchor;
@@ -61,7 +61,6 @@ public class PlaceOrderForm implements Initializable {
     ProductBoImpl productBoImpl = new ProductBoImpl();
     CustomerBoImpl customerBoImpl = new CustomerBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -188,16 +187,16 @@ public class PlaceOrderForm implements Initializable {
 
         ObservableList<OrderHasItem> orderHasItemObservableList =FXCollections.observableArrayList();
 
-//        for (CarTbl cartTbl : cartList) {
-//            String oID = lblOrderId.getText();
-//            String itemCode = cartTbl.getItemCode();
-//            Integer qty = cartTbl.getQty();
-//            Double discount = cartTbl.getDiscount();
-//            orderHasItemObservableList.add(new OrderHasItem(oID, itemCode, qty, discount)) ;
-//
-//        }
-//
-//        boolean b = orderBoImpl.saveOrderDetails(orderHasItemObservableList);
+        for (CarTbl cartTbl : cartList) {
+            String oID = lblOrderId.getText();
+            String itemCode = cartTbl.getItemCode();
+            Integer qty = cartTbl.getQty();
+            Double discount = cartTbl.getDiscount();
+            orderHasItemObservableList.add(new OrderHasItem(null,oID, itemCode, qty, discount)) ;
+
+        }
+
+         orderBoImpl.saveOrderDetails(orderHasItemObservableList);
 
         Order order = new Order(id,Cusid,orderDate,amount );
 
