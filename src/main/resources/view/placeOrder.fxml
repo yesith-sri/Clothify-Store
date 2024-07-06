@@ -14,8 +14,8 @@
 
 <AnchorPane fx:id="Anchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.PlaceOrderFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="55.0" layoutX="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="762.0" />
-      <Label layoutX="514.0" layoutY="14.0" text="Place Order Form">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="55.0" layoutX="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="853.0" />
+      <Label layoutX="556.0" layoutY="14.0" text="Place Order Form">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -53,7 +53,7 @@
             <Font name="System Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lblOrderId" layoutX="884.0" layoutY="108.0" text="OR#001">
+      <Label fx:id="lblOrderId" layoutX="895.0" layoutY="108.0" text="OR#001">
          <font>
             <Font name="System Bold Italic" size="15.0" />
          </font>
@@ -66,13 +66,13 @@
       <Label fx:id="lblEmail" layoutX="311.0" layoutY="249.0" prefHeight="18.0" prefWidth="175.0" />
       <Label fx:id="lblDesc" layoutX="335.0" layoutY="381.0" prefHeight="18.0" prefWidth="61.0" />
       <Label fx:id="lblUnitPrice" layoutX="338.0" layoutY="412.0" prefHeight="18.0" prefWidth="42.0" />
-      <TableView fx:id="tblCart" layoutX="528.0" layoutY="167.0" prefHeight="254.0" prefWidth="427.0">
+      <TableView fx:id="tblCart" layoutX="528.0" layoutY="167.0" prefHeight="254.0" prefWidth="462.0">
          <columns>
             <TableColumn fx:id="colItemCode" prefWidth="66.0" text="Item Code" />
             <TableColumn fx:id="colDesc" prefWidth="100.0" text="Decription" />
-            <TableColumn fx:id="colQty" prefWidth="98.0" text="QTY Customer" />
-            <TableColumn fx:id="colUnitPrice" prefWidth="83.0" text="Unit Price" />
-            <TableColumn fx:id="colTotal" prefWidth="79.0" text="Total" />
+            <TableColumn fx:id="colQty" prefWidth="103.20001220703125" text="QTY Customer" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="103.20001220703125" text="Unit Price" />
+            <TableColumn fx:id="colTotal" prefWidth="89.5999755859375" text="Total" />
          </columns>
       </TableView>
       <JFXButton layoutX="408.0" layoutY="440.0" onAction="#btnAddToCartOnAction" style="-fx-background-color: #34495e;" text="Add to cart" textFill="WHITE">
@@ -81,17 +81,17 @@
          </font>
       </JFXButton>
       <TextField fx:id="txtQtyFroCustomer" layoutX="409.0" layoutY="394.0" onAction="#txtAddtoCartOnAction" prefHeight="25.0" prefWidth="78.0" promptText="QTY" />
-      <JFXButton layoutX="860.0" layoutY="443.0" onAction="#btnPlaceOrderOnAction" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #27ae60;" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="895.0" layoutY="441.0" onAction="#btnPlaceOrderOnAction" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #27ae60;" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblNetTotal" layoutX="608.0" layoutY="444.0" text="00000/=" textFill="#834b4b">
+      <Label fx:id="lblNetTotal" layoutX="627.0" layoutY="446.0" text="00000/=" textFill="#834b4b">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="530.0" layoutY="443.0" text="Net Total :">
+      <Label layoutX="549.0" layoutY="445.0" text="Net Total :">
          <font>
             <Font size="15.0" />
          </font>

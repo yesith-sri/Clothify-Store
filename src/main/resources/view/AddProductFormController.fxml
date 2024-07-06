@@ -19,8 +19,7 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="209.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="812.0" />
-            <Label layoutX="532.0" layoutY="7.0" prefHeight="27.0" prefWidth="154.0" text="Item  Managment">
+            <Label layoutX="507.0" layoutY="10.0" prefHeight="27.0" prefWidth="154.0" text="Item  Managment">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -106,5 +105,11 @@
       <ComboBox fx:id="cmbSup" layoutX="306.0" layoutY="211.0" prefHeight="26.0" prefWidth="150.0" promptText="Supplier Id" />
       <JFXTextField fx:id="txtprice" layoutX="619.0" layoutY="211.0" prefHeight="26.0" prefWidth="147.0" promptText="Price Per One" />
       <Separator layoutX="529.0" layoutY="73.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="2.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="48.0" layoutX="210.0" stroke="BLACK" strokeType="INSIDE" width="898.0" />
+      <Label layoutX="544.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" text="Item Managment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
          </children>
       </AnchorPane>

@@ -44,8 +44,8 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="210.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="762.0" />
-            <Label layoutX="514.0" layoutY="14.0" prefHeight="27.0" prefWidth="147.0" text="Supplier  Details">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="210.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="880.0" />
+            <Label layoutX="560.0" layoutY="14.0" prefHeight="27.0" prefWidth="147.0" text="Supplier  Details">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -65,30 +65,30 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <TableView fx:id="Table1" layoutX="232.0" layoutY="298.0" prefHeight="182.0" prefWidth="715.0">
+            <TableView fx:id="Table1" layoutX="232.0" layoutY="298.0" prefHeight="182.0" prefWidth="759.0">
                <columns>
                   <TableColumn fx:id="colId" prefWidth="174.39999389648438" text="Supplier Id" />
                   <TableColumn fx:id="colName" prefWidth="206.40005493164062" text="Supplier Name" />
-                  <TableColumn fx:id="colAddress" prefWidth="180.7999267578125" text="Supplier Address" />
-                  <TableColumn fx:id="colEmail" prefWidth="153.60009765625" text="Email" />
+                  <TableColumn fx:id="colAddress" prefWidth="202.39996337890625" text="Supplier Address" />
+                  <TableColumn fx:id="colEmail" prefWidth="174.39996337890625" text="Email" />
                </columns>
             </TableView>
-            <Button layoutX="846.0" layoutY="77.0" mnemonicParsing="false" onAction="#AddAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
+            <Button layoutX="890.0" layoutY="79.0" mnemonicParsing="false" onAction="#AddAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="846.0" layoutY="133.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #2C3A47;" text="Search" textFill="WHITE">
+            <Button layoutX="890.0" layoutY="133.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #2C3A47;" text="Search" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="846.0" layoutY="194.0" mnemonicParsing="false" onAction="#DeleteActiion" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="890.0" layoutY="194.0" mnemonicParsing="false" onAction="#DeleteActiion" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="845.0" layoutY="251.0" mnemonicParsing="false" onAction="#UpdateAction" style="-fx-background-color: #EAB543;" text="Update">
+            <Button layoutX="889.0" layoutY="251.0" mnemonicParsing="false" onAction="#UpdateAction" style="-fx-background-color: #EAB543;" text="Update">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
