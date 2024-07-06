@@ -14,10 +14,10 @@
 
 <AnchorPane fx:id="Anchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.PlaceOrderFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#30336b" height="65.0" layoutX="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="761.0" />
-      <Label layoutX="457.0" layoutY="7.0" text="Place Order Form" textFill="#dff9fb">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="55.0" layoutX="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="762.0" />
+      <Label layoutX="514.0" layoutY="14.0" text="Place Order Form">
          <font>
-            <Font name="System Bold" size="35.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
       <ComboBox fx:id="cmbCustomerIDs" layoutX="251.0" layoutY="117.0" prefWidth="150.0" promptText="Customer IDs" />
@@ -86,7 +86,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblNetTotal" layoutX="608.0" layoutY="444.0" text="7500000/=" textFill="#834b4b">
+      <Label fx:id="lblNetTotal" layoutX="608.0" layoutY="444.0" text="00000/=" textFill="#834b4b">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -97,9 +97,9 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3b98" height="499.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="212.0" />
-      <Label alignment="CENTER" layoutX="37.0" layoutY="43.0" prefHeight="18.0" prefWidth="147.0" text="Clothify" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="37.0" layoutY="43.0" prefHeight="18.0" prefWidth="147.0" text="Clothify" textFill="#ccae62">
          <font>
-            <Font name="System Bold" size="26.0" />
+            <Font name="System Bold Italic" size="26.0" />
          </font>
       </Label>
       <JFXButton layoutX="33.0" layoutY="377.0" onAction="#ProductAction" prefHeight="30.0" prefWidth="154.0" text="Product Details" textFill="#cad3c8">
@@ -122,7 +122,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <Label layoutX="41.0" layoutY="81.0" prefHeight="30.0" prefWidth="140.0" text="Employee Panel" textFill="WHITE">
+      <Label layoutX="41.0" layoutY="81.0" prefHeight="30.0" prefWidth="140.0" text="Employee Panel" textFill="#ccae62">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

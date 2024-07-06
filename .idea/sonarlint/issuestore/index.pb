@@ -242,8 +242,6 @@ e
 5src/main/java/icet/edu/drm/dao/Custom/ProductDao.java,f\1\f15351e06f2867a68591ab26fb0055e33675d75b
 s
 Csrc/main/java/icet/edu/drm/controller/AddProductFormController.java,d\7\d7647ef61a773abb9f4f7bfea8611e85d091b65e
-i
-9src/main/java/icet/edu/drm/controller/PlaceOrderForm.java,a\6\a6090b657545167bc6d8b76f2588dfd36276861e
 a
 1src/main/java/icet/edu/drm/bo/custom/OrderBo.java,3\9\39fc0d55c7e85cc0f61840b6e292e2ff01959bb4
 l

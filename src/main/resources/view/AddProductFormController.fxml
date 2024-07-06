@@ -12,64 +12,64 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Anchor2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.AddProductFormController">
+<AnchorPane fx:id="Anchor2" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.AddProductFormController">
    <children>
-            <JFXTextField fx:id="txtId" layoutX="232.0" layoutY="66.0" prefHeight="26.0" prefWidth="147.0" promptText="Product Id">
+            <JFXTextField fx:id="txtId" layoutX="308.0" layoutY="66.0" prefHeight="26.0" prefWidth="147.0" promptText="Product Id">
                <font>
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="210.0" layoutY="-13.0" stroke="BLACK" strokeType="INSIDE" width="554.0" />
-            <Label layoutX="404.0" layoutY="17.0" prefHeight="22.0" prefWidth="131.0" text="Item  Managment">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="209.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="801.0" />
+            <Label layoutX="532.0" layoutY="7.0" prefHeight="27.0" prefWidth="154.0" text="Item  Managment">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtName" layoutX="450.0" layoutY="66.0" prefHeight="26.0" prefWidth="147.0" promptText="Product Name">
+            <JFXTextField fx:id="txtName" layoutX="619.0" layoutY="66.0" prefHeight="26.0" prefWidth="147.0" promptText="Product Name">
                <font>
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="txtQty" layoutX="450.0" layoutY="135.0" prefHeight="26.0" prefWidth="147.0" promptText="Qty">
+            <JFXTextField fx:id="txtQty" layoutX="619.0" layoutY="134.0" prefHeight="26.0" prefWidth="147.0" promptText="Qty">
                <font>
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <TableView fx:id="Table1" layoutX="214.0" layoutY="293.0" prefHeight="182.0" prefWidth="546.0">
+            <TableView fx:id="Table1" layoutX="223.0" layoutY="292.0" prefHeight="182.0" prefWidth="754.0">
                <columns>
-                  <TableColumn fx:id="colId" text="Product Id" />
-                  <TableColumn fx:id="colName" prefWidth="104.79998779296875" text="Product Name" />
-                  <TableColumn fx:id="ColSize" prefWidth="108.00006103515625" text="Product Size " />
-                  <TableColumn fx:id="ColQty" prefWidth="70.4000244140625" text="Qty" />
-            <TableColumn fx:id="ColSupId" prefWidth="88.0" text="SupID" />
-            <TableColumn fx:id="colPrice" prefWidth="105.5999755859375" text="Price per 1" />
+                  <TableColumn fx:id="colId" prefWidth="115.99998474121094" text="Product Id" />
+                  <TableColumn fx:id="colName" prefWidth="139.20001220703125" text="Product Name" />
+                  <TableColumn fx:id="ColSize" prefWidth="136.0" text="Product Size " />
+                  <TableColumn fx:id="ColQty" prefWidth="107.20001220703125" text="Qty" />
+            <TableColumn fx:id="ColSupId" prefWidth="130.40008544921875" text="SupID" />
+            <TableColumn fx:id="colPrice" prefWidth="147.199951171875" text="Price per 1" />
                </columns>
             </TableView>
-            <Button layoutX="686.0" layoutY="67.0" mnemonicParsing="false" onAction="#AddAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
+            <Button layoutX="883.0" layoutY="67.0" mnemonicParsing="false" onAction="#AddAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #27ae60;" text="Add" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="686.0" layoutY="119.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #2C3A47;" text="Search" textFill="WHITE">
+            <Button layoutX="883.0" layoutY="122.0" mnemonicParsing="false" onAction="#searchAction" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #2C3A47;" text="Search" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="686.0" layoutY="170.0" mnemonicParsing="false" onAction="#DeleteActiion" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="883.0" layoutY="179.0" mnemonicParsing="false" onAction="#DeleteActiion" prefHeight="26.0" prefWidth="55.0" style="-fx-background-color: #c0392b;" text="Delete" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Button layoutX="685.0" layoutY="231.0" mnemonicParsing="false" onAction="#UpdateAction" style="-fx-background-color: #EAB543;" text="Update">
+            <Button layoutX="883.0" layoutY="235.0" mnemonicParsing="false" onAction="#UpdateAction" style="-fx-background-color: #EAB543;" text="Update">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Separator layoutX="653.0" layoutY="79.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="8.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3b98" height="497.0" layoutX="-2.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="212.0" />
-            <Label alignment="CENTER" layoutX="37.0" layoutY="42.0" prefHeight="18.0" prefWidth="147.0" text="Clothify" textFill="WHITE">
+            <Separator layoutX="831.0" layoutY="73.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="8.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3b98" height="513.0" layoutX="-2.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" width="212.0" />
+            <Label alignment="CENTER" layoutX="37.0" layoutY="42.0" prefHeight="18.0" prefWidth="147.0" text="Clothify" textFill="#ccae62">
                <font>
-                  <Font name="System Bold" size="26.0" />
+                  <Font name="System Bold Italic" size="26.0" />
                </font>
             </Label>
             <JFXButton layoutX="33.0" layoutY="376.0" onAction="#ProductAction" prefHeight="30.0" prefWidth="154.0" text="Product Details" textFill="#cad3c8">
@@ -92,7 +92,7 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </JFXButton>
-            <Label layoutX="41.0" layoutY="80.0" prefHeight="30.0" prefWidth="140.0" text="Employee Panel" textFill="WHITE">
+            <Label layoutX="41.0" layoutY="80.0" prefHeight="30.0" prefWidth="140.0" text="Employee Panel" textFill="#ccae62">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
@@ -102,9 +102,9 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-      <ComboBox fx:id="cmb" layoutX="230.0" layoutY="136.0" prefWidth="150.0" promptText="Product Size" />
-      <ComboBox fx:id="cmbSup" layoutX="230.0" layoutY="211.0" prefHeight="26.0" prefWidth="150.0" promptText="Supplier Id" />
-      <JFXTextField fx:id="txtprice" layoutX="450.0" layoutY="211.0" prefHeight="26.0" prefWidth="147.0" promptText="Price Per One" />
-      <Separator layoutX="412.0" layoutY="79.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="2.0" />
+      <ComboBox fx:id="cmb" layoutX="306.0" layoutY="135.0" prefWidth="150.0" promptText="Product Size" />
+      <ComboBox fx:id="cmbSup" layoutX="306.0" layoutY="211.0" prefHeight="26.0" prefWidth="150.0" promptText="Supplier Id" />
+      <JFXTextField fx:id="txtprice" layoutX="619.0" layoutY="211.0" prefHeight="26.0" prefWidth="147.0" promptText="Price Per One" />
+      <Separator layoutX="529.0" layoutY="73.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="2.0" />
          </children>
       </AnchorPane>

@@ -10,7 +10,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 import java.util.Random;
@@ -29,6 +31,7 @@ public class UserRegFormController implements Initializable {
     public TableColumn colEmail;
     public ComboBox Cmb;
     public Button Addbuttton;
+    public AnchorPane Anchor;
 
     UserBoImpl userBoImpl = new UserBoImpl();
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
@@ -191,6 +194,7 @@ public class UserRegFormController implements Initializable {
 
 
     public void DashAction(ActionEvent actionEvent) {
+
     }
 
     public void SupplierAction(ActionEvent actionEvent) {
@@ -206,5 +210,14 @@ public class UserRegFormController implements Initializable {
     }
 
 
+    public void logOutAction(ActionEvent actionEvent) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setContentText("Are you sure want to logout..?");
+        Optional<ButtonType> result = alert.showAndWait();
 
+        if (result.get() == ButtonType.OK) {
+            sceneSwitch.switchScene(Anchor,"welcomeForm.fxml");
+        }
+    }
 }
