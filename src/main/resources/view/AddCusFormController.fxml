@@ -18,7 +18,7 @@
             <Font size="13.0" />
          </font>
       </JFXTextField>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="58.0" layoutX="210.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="812.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="58.0" layoutX="210.0" layoutY="-7.0" stroke="BLACK" strokeType="INSIDE" width="822.0" />
       <Label layoutX="509.0" layoutY="11.0" prefHeight="27.0" prefWidth="212.0" text="Customer  Managment">
          <font>
             <Font name="System Bold" size="18.0" />

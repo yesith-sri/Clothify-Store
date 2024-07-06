@@ -8,7 +8,9 @@ import icet.edu.drm.util.BoType;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -19,6 +21,7 @@ public class welcomeFormController implements Initializable {
     public JFXTextField txtUserName;
     public JFXTextField txtPassword;
     public AnchorPane welcomeAnchor;
+    public ImageView img;
     private boolean isShow;
 
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
@@ -72,5 +75,9 @@ public class welcomeFormController implements Initializable {
             new Alert(Alert.AlertType.INFORMATION,"If your first time to sign in to this, Please reset your password clicked forgot password button").show();
             isShow=false;
         }
+    }
+
+    public void asd(MouseEvent mouseEvent) {
+
     }
 }
