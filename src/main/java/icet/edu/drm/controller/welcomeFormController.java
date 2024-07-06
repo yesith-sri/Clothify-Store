@@ -21,7 +21,6 @@ public class welcomeFormController implements Initializable {
     public JFXTextField txtUserName;
     public JFXTextField txtPassword;
     public AnchorPane welcomeAnchor;
-    public ImageView img;
     private boolean isShow;
 
     SceneSwitchController sceneSwitch = SceneSwitchController.getInstance();
@@ -77,7 +76,5 @@ public class welcomeFormController implements Initializable {
         }
     }
 
-    public void asd(MouseEvent mouseEvent) {
 
-    }
 }
