@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="welcomeAnchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.welcomeFormController">
+<AnchorPane fx:id="welcomeAnchor" prefHeight="481.0" prefWidth="971.0" style="-fx-background-image: #f5f6fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.welcomeFormController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="352.0" layoutY="30.0" prefHeight="46.0" prefWidth="322.0" text="Welcome To Clothify" textFill="#82589f">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="27.0" prefHeight="46.0" prefWidth="384.0" text="Welcome To Clothify Store" textFill="#82589f">
          <font>
             <Font name="System Bold Italic" size="30.0" />
          </font>
@@ -48,7 +48,7 @@
          <children>
             <ImageView fx:id="imgView" disable="true" fitHeight="318.0" fitWidth="287.0" layoutX="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../java/icet/edu/drm/png/sdf.png" />
+                  <Image url="@../images/sdf.png" />
                </image>
                <viewport>
                   <Rectangle2D minX="50.0" minY="50.0" />
