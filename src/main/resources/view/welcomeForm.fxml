@@ -18,7 +18,7 @@
             <Image url="@../images/pexels-mat-brown-150387-449530.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3436" height="294.0" layoutX="450.0" layoutY="99.0" opacity="0.31" stroke="#2d3436" strokeType="INSIDE" width="510.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2d3436" height="294.0" layoutX="450.0" layoutY="99.0" opacity="0.23" stroke="#2d3436" strokeType="INSIDE" width="510.0" />
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="356.0" layoutY="27.0" prefHeight="46.0" prefWidth="384.0" text="Welcome To Clothify Store" textFill="#1e3799">
          <font>
             <Font name="System Bold Italic" size="30.0" />
@@ -56,12 +56,12 @@
             <Image url="@../images/dress.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtUserName" layoutX="606.0" layoutY="145.0" prefHeight="26.0" prefWidth="198.0" promptText="User Name :" unFocusColor="#e7e7e7">
+      <JFXTextField fx:id="txtPassword" focusColor="BLACK" layoutX="606.0" layoutY="228.0" prefHeight="26.0" prefWidth="198.0" promptText="Password : " unFocusColor="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtPassword" layoutX="606.0" layoutY="228.0" prefHeight="26.0" prefWidth="198.0" promptText="Password : " unFocusColor="WHITE">
+      <JFXTextField fx:id="txtUserName" focusColor="BLACK" layoutX="606.0" layoutY="145.0" prefHeight="26.0" prefWidth="198.0" promptText="User Name :" unFocusColor="#e7e7e7">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
