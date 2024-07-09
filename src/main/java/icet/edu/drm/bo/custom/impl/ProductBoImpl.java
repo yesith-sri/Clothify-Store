@@ -6,8 +6,10 @@ import icet.edu.drm.dao.Custom.ProductDao;
 import icet.edu.drm.dao.Custom.impl.ProductDaoImpl;
 import icet.edu.drm.dao.DaoFactory;
 import icet.edu.drm.entity.CustomerEntity;
+import icet.edu.drm.entity.OrderHasItemEntity;
 import icet.edu.drm.entity.ProductEntity;
 import icet.edu.drm.model.Customer;
+import icet.edu.drm.model.OrderHasItem;
 import icet.edu.drm.model.Product;
 import icet.edu.drm.util.DaoType;
 import javafx.collections.FXCollections;
@@ -49,8 +51,8 @@ public class ProductBoImpl implements ProductBo {
         return productObservableList;
     }
 
-    public Product getProById(String id) {
-        ProductEntity productEntity =  productDao.searchById(id);
+    public Product getProById(String newValue) {
+        ProductEntity productEntity =  productDao.searchById(newValue);
         return new ObjectMapper().convertValue(productEntity,Product.class);
 
     }
@@ -63,5 +65,17 @@ public class ProductBoImpl implements ProductBo {
     public boolean updatePro(Product product) {
 
         return productDao.update(new ObjectMapper().convertValue(product, ProductEntity.class));
+    }
+
+    public ObservableList getAllOrder() {
+
+        ObservableList<OrderHasItemEntity> OderEntities =  productDao.searchOrderAll();
+
+        ObservableList<OrderHasItem> productObservableList = FXCollections.observableArrayList();
+
+        OderEntities.forEach(OrderHasItemEntity -> {
+            productObservableList.add(new ObjectMapper().convertValue(OrderHasItemEntity, OrderHasItem.class));
+        });
+        return productObservableList;
     }
 }

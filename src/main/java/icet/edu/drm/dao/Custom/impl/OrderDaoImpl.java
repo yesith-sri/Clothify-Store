@@ -3,6 +3,7 @@ package icet.edu.drm.dao.Custom.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import icet.edu.drm.dao.Custom.OrderDao;
 import icet.edu.drm.dao.DaoFactory;
+import icet.edu.drm.entity.CustomerEntity;
 import icet.edu.drm.entity.OrderEntity;
 import icet.edu.drm.entity.OrderHasItemEntity;
 import icet.edu.drm.model.OrderHasItem;
@@ -68,6 +69,20 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     private void updateQty(String itemCode, Integer qty) {
+
+    }
+
+    public OrderEntity searchById(String id) {
+
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+
+        Query query = session.createQuery("FROM order_table WHERE id=:id");
+        query.setParameter("id",id);
+        OrderEntity orderEntity = (OrderEntity) query.uniqueResult();
+        session.close();
+
+        return orderEntity;
 
     }
 }

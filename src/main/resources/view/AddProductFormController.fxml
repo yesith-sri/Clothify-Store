@@ -8,6 +8,8 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -106,10 +108,15 @@
       <JFXTextField fx:id="txtprice" layoutX="619.0" layoutY="211.0" prefHeight="26.0" prefWidth="147.0" promptText="Price Per One" />
       <Separator layoutX="529.0" layoutY="73.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="2.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="48.0" layoutX="210.0" stroke="BLACK" strokeType="INSIDE" width="898.0" />
-      <Label layoutX="544.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" text="Item Managment">
+      <Label layoutX="583.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" text="Item Managment">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="737.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dress.png" />
+         </image>
+      </ImageView>
          </children>
       </AnchorPane>

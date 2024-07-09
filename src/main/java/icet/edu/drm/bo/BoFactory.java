@@ -1,7 +1,6 @@
 package icet.edu.drm.bo;
 
-import icet.edu.drm.bo.custom.impl.CustomerBoImpl;
-import icet.edu.drm.bo.custom.impl.UserBoImpl;
+import icet.edu.drm.bo.custom.impl.*;
 import icet.edu.drm.util.BoType;
 
 public class BoFactory {
@@ -17,8 +16,9 @@ public class BoFactory {
         switch (type){
             case USER:return (T)new UserBoImpl();
             case CUSTOMER:return (T)new CustomerBoImpl();
-            //case PRODUCT:return (T)new ProductBoImpl();
-
+            case PRODUCT:return (T)new ProductBoImpl();
+            case SUPPLIER:return (T) new SupplierBoImpl();
+            case ORDER:return (T) new OrderBoImpl();
         }
         return null;
     }

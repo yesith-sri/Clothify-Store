@@ -2,6 +2,7 @@ package icet.edu.drm.dao.Custom.impl;
 
 import icet.edu.drm.dao.Custom.ProductDao;
 import icet.edu.drm.entity.CustomerEntity;
+import icet.edu.drm.entity.OrderHasItemEntity;
 import icet.edu.drm.entity.ProductEntity;
 import icet.edu.drm.util.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -101,5 +102,20 @@ public class ProductDaoImpl implements ProductDao {
         session.close();
 
         return productEntity;
+    }
+
+    public ObservableList<OrderHasItemEntity> searchOrderAll() {
+        Session session = HibernateUtil.getSession();
+        session.getTransaction().begin();
+        List<OrderHasItemEntity> list = session.createQuery("FROM order_details").list();
+        session.close();
+
+        ObservableList<OrderHasItemEntity> customerEntityList = FXCollections.observableArrayList();
+
+        list.forEach(OrderHasItemEntity -> {
+            customerEntityList.add(OrderHasItemEntity);
+        });
+        return customerEntityList;
+
     }
 }

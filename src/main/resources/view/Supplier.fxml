@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Anchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.SupplierFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="197.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="812.0" />
+      <Label layoutX="546.0" layoutY="11.0" prefHeight="27.0" prefWidth="123.0" text="View Supplier">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3b98" height="506.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
+      <Label alignment="CENTER" layoutX="20.0" layoutY="27.0" prefHeight="18.0" prefWidth="147.0" text="Clothify" textFill="#f19066">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="14.0" layoutY="271.0" onAction="#SupplierAction" prefHeight="30.0" prefWidth="154.0" text="Supplier Details" textFill="#cad3c8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="14.0" layoutY="121.0" onAction="#ManageAction" prefHeight="30.0" prefWidth="154.0" text="Manage Employee" textFill="#cad3c8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="22.0" layoutY="362.0" onAction="#OrderAction" prefHeight="26.0" prefWidth="140.0" text="Order Details" textFill="#cad3c8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="22.0" layoutY="193.0" onAction="#ItemAction" prefHeight="30.0" prefWidth="140.0" text="Item Details" textFill="#cad3c8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="37.0" layoutY="60.0" text="Admin Panel" textFill="#f19066">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="63.0" layoutY="449.0" mnemonicParsing="false" onAction="#logOutAction" style="-fx-background-color: #222f3e;" text="Log Out" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <JFXTextField fx:id="txtId" layoutX="344.0" layoutY="102.0" prefHeight="26.0" prefWidth="147.0" promptText="Supplier Id">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" layoutX="343.0" layoutY="209.0" prefHeight="26.0" prefWidth="147.0" promptText="Supplier Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtcompany" layoutX="716.0" layoutY="102.0" prefHeight="26.0" prefWidth="147.0" promptText="Supplier Company">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtEmail" layoutX="716.0" layoutY="202.0" prefHeight="26.0" prefWidth="147.0" promptText="Supplier Email">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="Table1" layoutX="220.0" layoutY="286.0" onMouseClicked="#rowdata" prefHeight="182.0" prefWidth="759.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="174.39999389648438" text="Supplier Id" />
+            <TableColumn fx:id="colName" prefWidth="206.40005493164062" text="Supplier Name" />
+            <TableColumn fx:id="colAddress" prefWidth="202.39996337890625" text="Supplier Address" />
+            <TableColumn fx:id="colEmail" prefWidth="174.39996337890625" text="Email" />
+         </columns>
+      </TableView>
+      <Separator layoutX="594.0" layoutY="87.0" orientation="VERTICAL" prefHeight="182.0" prefWidth="0.0" />
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="669.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dress.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

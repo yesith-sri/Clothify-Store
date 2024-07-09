@@ -3,28 +3,23 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="txtRePass" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.ResetFormController">
+<AnchorPane fx:id="Anchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.ResetFormController">
    <children>
-      <Label alignment="CENTER" layoutX="422.0" layoutY="20.0" prefHeight="35.0" prefWidth="196.0" text="Clothify Store" textFill="#82589f">
+      <ImageView fitHeight="481.0" fitWidth="995.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/pexels-hngstrm-1225251.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="375.0" layoutY="20.0" prefHeight="35.0" prefWidth="196.0" text="Clothify Store" textFill="#1e3799">
          <font>
             <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="581.0" layoutY="78.0" prefHeight="27.0" prefWidth="180.0" text="Reset Your Password">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="581.0" layoutY="105.0" text="Enter the email address you used to register with ">
-         <font>
-            <Font size="13.0" />
          </font>
       </Label>
       <TextField fx:id="txtEmail" layoutX="581.0" layoutY="139.0" prefHeight="35.0" prefWidth="224.0" promptText="Email Address" />
@@ -33,11 +28,32 @@
       <TextField fx:id="txtOTPCode" layoutX="618.0" layoutY="397.0" prefHeight="26.0" prefWidth="110.0" promptText="OTP Code" />
       <Button layoutX="794.0" layoutY="397.0" mnemonicParsing="false" onAction="#ResetAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #25CCF7;" text="Reset" />
       <JFXTextField fx:id="txtRePassWord" layoutX="618.0" layoutY="321.0" prefHeight="26.0" prefWidth="196.0" promptText="Re-enter New Password" />
-      <ImageView fitHeight="373.0" fitWidth="325.0" layoutX="58.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="373.0" fitWidth="325.0" layoutX="58.0" layoutY="65.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/sdf.png" />
          </image>
       </ImageView>
-      <Separator layoutX="442.0" layoutY="91.0" orientation="VERTICAL" prefHeight="268.0" prefWidth="6.0" />
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="503.0" layoutY="393.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logout.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="46.0" fitWidth="56.0" layoutX="627.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dress.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="576.0" layoutY="113.0" text="Enter the email address you used to register with " textFill="#e01f1f">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="581.0" layoutY="78.0" prefHeight="27.0" prefWidth="180.0" text="Reset Your Password" textFill="#778ca3">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="27.0" layoutX="571.0" layoutY="109.0" opacity="0.24" stroke="BLACK" strokeType="INSIDE" width="331.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="26.0" layoutX="573.0" layoutY="79.0" opacity="0.24" stroke="BLACK" strokeType="INSIDE" width="200.0" />
    </children>
 </AnchorPane>

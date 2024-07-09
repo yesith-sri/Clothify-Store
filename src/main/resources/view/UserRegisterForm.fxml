@@ -8,45 +8,42 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="Anchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.UserRegFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3b98" height="491.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3b3b98" height="518.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="201.0" />
       <Label alignment="CENTER" layoutX="26.0" layoutY="29.0" prefHeight="18.0" prefWidth="147.0" text="Clothify" textFill="#f19066">
          <font>
             <Font name="System Bold Italic" size="26.0" />
          </font>
       </Label>
-      <JFXButton layoutX="23.0" layoutY="327.0" onAction="#SupplierAction" prefHeight="30.0" prefWidth="154.0" text="Supplier Details" textFill="#cad3c8">
+      <JFXButton layoutX="20.0" layoutY="273.0" onAction="#SupplierAction" prefHeight="30.0" prefWidth="154.0" text="Supplier Details" textFill="#cad3c8">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="23.0" layoutY="118.0" onAction="#DashAction" prefHeight="30.0" prefWidth="154.0" text="DashBoard" textFill="#cad3c8">
+      <JFXButton layoutX="20.0" layoutY="123.0" onAction="#ManageAction" prefHeight="30.0" prefWidth="154.0" text="Manage Employee" textFill="#cad3c8">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="23.0" layoutY="182.0" onAction="#ManageAction" prefHeight="30.0" prefWidth="154.0" text="Manage Employee" textFill="#cad3c8">
+      <JFXButton layoutX="28.0" layoutY="364.0" onAction="#OrderAction" prefHeight="26.0" prefWidth="140.0" text="Order Details" textFill="#cad3c8">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="28.0" layoutY="398.0" onAction="#OrderAction" prefHeight="26.0" prefWidth="140.0" text="Order Details" textFill="#cad3c8">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="30.0" layoutY="257.0" onAction="#ItemAction" prefHeight="30.0" prefWidth="140.0" text="Item Details" textFill="#cad3c8">
+      <JFXButton layoutX="28.0" layoutY="195.0" onAction="#ItemAction" prefHeight="30.0" prefWidth="140.0" text="Item Details" textFill="#cad3c8">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </JFXButton>
       <JFXTextField fx:id="txtId" layoutX="337.0" layoutY="76.0" prefHeight="26.0" prefWidth="147.0" promptText="Employee Id" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="200.0" stroke="BLACK" strokeType="INSIDE" width="784.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="200.0" stroke="BLACK" strokeType="INSIDE" width="821.0" />
       <Label layoutX="469.0" layoutY="15.0" prefHeight="27.0" prefWidth="194.0" text="Employee Managment">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -95,5 +92,10 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="663.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dress.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

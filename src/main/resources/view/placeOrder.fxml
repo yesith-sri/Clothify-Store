@@ -8,6 +8,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -27,7 +29,7 @@
       <Label layoutX="249.0" layoutY="249.0" text="Email :" />
       <Label layoutX="247.0" layoutY="383.0" prefHeight="18.0" prefWidth="56.0" text="DESC :" />
       <Label layoutX="245.0" layoutY="411.0" text="Unit Price : " />
-      <Separator layoutX="506.0" layoutY="169.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="0.0" />
+      <Separator layoutX="498.0" layoutY="172.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="0.0" />
       <Label layoutX="458.0" layoutY="108.0" text="Time :">
          <font>
             <Font size="15.0" />
@@ -66,7 +68,7 @@
       <Label fx:id="lblEmail" layoutX="311.0" layoutY="249.0" prefHeight="18.0" prefWidth="175.0" />
       <Label fx:id="lblDesc" layoutX="335.0" layoutY="381.0" prefHeight="18.0" prefWidth="61.0" />
       <Label fx:id="lblUnitPrice" layoutX="338.0" layoutY="412.0" prefHeight="18.0" prefWidth="42.0" />
-      <TableView fx:id="tblCart" layoutX="528.0" layoutY="167.0" prefHeight="254.0" prefWidth="462.0">
+      <TableView fx:id="tblCart" layoutX="511.0" layoutY="174.0" prefHeight="254.0" prefWidth="462.0">
          <columns>
             <TableColumn fx:id="colItemCode" prefWidth="66.0" text="Item Code" />
             <TableColumn fx:id="colDesc" prefWidth="100.0" text="Decription" />
@@ -81,7 +83,7 @@
          </font>
       </JFXButton>
       <TextField fx:id="txtQtyFroCustomer" layoutX="409.0" layoutY="394.0" onAction="#txtAddtoCartOnAction" prefHeight="25.0" prefWidth="78.0" promptText="QTY" />
-      <JFXButton layoutX="895.0" layoutY="441.0" onAction="#btnPlaceOrderOnAction" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #27ae60;" text="Place Order" textFill="WHITE">
+      <JFXButton layoutX="866.0" layoutY="440.0" onAction="#btnPlaceOrderOnAction" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #27ae60;" text="Place Order" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -134,5 +136,10 @@
       </Button>
       <Label layoutX="248.0" layoutY="444.0" prefHeight="18.0" prefWidth="49.0" text="Size :" />
       <Label fx:id="lblSize" layoutX="342.0" layoutY="444.0" prefHeight="18.0" prefWidth="34.0" />
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="707.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dress.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

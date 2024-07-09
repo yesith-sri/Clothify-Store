@@ -189,24 +189,20 @@ public class UserRegFormController implements Initializable {
         }
     }
 
-
-
-
-
-    public void DashAction(ActionEvent actionEvent) {
-
+    public void SupplierAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "Supplier.fxml");
     }
 
-    public void SupplierAction(ActionEvent actionEvent) {
+    public void ManageAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "UserRegisterForm.fxml");
     }
 
-    public void ManageAction(ActionEvent actionEvent) {
+    public void OrderAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "OrderViewFormController.fxml");
     }
 
-    public void OrderAction(ActionEvent actionEvent) {
-    }
-
-    public void ItemAction(ActionEvent actionEvent) {
+    public void ItemAction(ActionEvent actionEvent) throws IOException {
+        sceneSwitch.switchScene(Anchor, "item.fxml");
     }
 
 
