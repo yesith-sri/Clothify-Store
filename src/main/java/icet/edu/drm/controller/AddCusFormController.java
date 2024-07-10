@@ -76,6 +76,8 @@ public class AddCusFormController implements Initializable {
                 txtAddress.setText("");
                 txtName.setText("");
                 txtEmail.setText("");
+                txtId.setText(customerBoImpl.generateEmployeeId());
+
             }
 
         } else {

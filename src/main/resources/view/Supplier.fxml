@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="Anchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.SupplierFormController">
+<AnchorPane fx:id="Anchor" onMouseClicked="#AnchorCkick" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.SupplierFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cad3c8" height="54.0" layoutX="197.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="812.0" />
       <Label layoutX="546.0" layoutY="11.0" prefHeight="27.0" prefWidth="123.0" text="View Supplier">

@@ -128,4 +128,17 @@ public class OrderViewFormController implements Initializable {
     }
 
 
+    public void AnchorClick(MouseEvent mouseEvent) {
+
+        txtId.setText("");
+        txtName.setText("");
+        txtAddress.setText("");
+        txtEmail.setText("");
+
+        txtId1Sup.setText("");
+        txtName1Sup.setText("");
+        txtcompanySup.setText("");
+        txtEmail1Sup.setText("");
+
+    }
 }

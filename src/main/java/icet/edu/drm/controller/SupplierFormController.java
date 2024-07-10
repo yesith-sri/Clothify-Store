@@ -105,4 +105,12 @@ public class SupplierFormController implements Initializable {
             }
         }
     }
+
+    public void AnchorCkick(MouseEvent mouseEvent) {
+
+        txtId.setText("");
+        txtName.setText("");
+        txtcompany.setText("");
+        txtEmail.setText("");
+    }
 }

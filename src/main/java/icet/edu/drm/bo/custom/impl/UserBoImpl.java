@@ -104,7 +104,13 @@ public class UserBoImpl implements UserBo {
                 return new PasswordAuthentication(myEmail,password);
             }
         });
-        String text1 ="Don't share this otp Code : "+text;
+        String text1 ="Dear User,\n\n" +
+                "To reset your password, please use the following One-Time Password (OTP):\n\n" +
+                text + "\n\n" +
+                "This code is valid for the next 10 minutes. Please do not share this OTP with anyone.\n\n" +
+                "Thank You!\n" +
+                "(Clothify Store)";
+
         Message message = prepareMessage(session,myEmail,receiveEmail,text1);
         Transport.send(message);
     }
@@ -117,7 +123,7 @@ public class UserBoImpl implements UserBo {
             message.setRecipients(Message.RecipientType.TO,new InternetAddress[]{
                     new InternetAddress(receiveEmail)
             });
-            message.setSubject("OTP CODE");
+            message.setSubject("One Time Password");
             message.setText(text);
 
             return message;

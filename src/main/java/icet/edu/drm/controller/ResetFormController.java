@@ -82,13 +82,6 @@ public class ResetFormController implements Initializable {
 
 
     public void Logout(MouseEvent mouseEvent) throws IOException {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setContentText("Are you sure want to logout..?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == ButtonType.OK) {
             sceneSwitch.switchScene(Anchor,"welcomeForm.fxml");
-        }
     }
 }

@@ -103,4 +103,14 @@ public class itemControllerForm implements Initializable {
             }
         }
     }
+
+    public void clickAnchor(MouseEvent mouseEvent) {
+
+        txtId.setText("");
+        txtName.setText("");
+        txtQty.setText(String.valueOf(""));
+        txtprice.setText(String.valueOf(""));
+        cmb.getSelectionModel().select("");
+        cmbSup.getSelectionModel().select("");
+    }
 }
