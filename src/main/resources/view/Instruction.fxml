@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="welcomeAnchor" prefHeight="481.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="icet.edu.drm.controller.instruction">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#95afc0" height="52.0" layoutX="358.0" layoutY="2.0" stroke="BLACK" strokeType="INSIDE" width="279.0" />
       <Label layoutX="430.0" layoutY="14.0" prefHeight="27.0" prefWidth="112.0" text="Instructions">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -19,9 +21,31 @@
             <Image url="@../images/dress.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="51.0" layoutY="412.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="51.0" layoutY="432.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logout.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="emptext" editable="false" layoutX="51.0" layoutY="88.0" prefHeight="326.0" prefWidth="406.0" />
+      <TextArea fx:id="Adminemp" layoutX="508.0" layoutY="88.0" prefHeight="326.0" prefWidth="406.0" />
+      <Label layoutX="180.0" layoutY="57.0" prefHeight="26.0" prefWidth="118.0" text="For Employee">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="673.0" layoutY="57.0" prefHeight="26.0" prefWidth="87.0" text="For Admin">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="44.0" fitWidth="38.0" layoutX="298.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/division.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="760.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/manager.png" />
          </image>
       </ImageView>
    </children>
