@@ -5,7 +5,6 @@ import icet.edu.drm.bo.custom.impl.UserBoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -13,7 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javax.mail.MessagingException;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Optional;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -80,8 +78,8 @@ public class ResetFormController implements Initializable {
         }
    }
 
-
     public void Logout(MouseEvent mouseEvent) throws IOException {
-            sceneSwitch.switchScene(Anchor,"welcomeForm.fxml");
+        sceneSwitch.switchScene(Anchor,"welcomeForm.fxml");
     }
+
 }
