@@ -48,7 +48,7 @@ public class ResetFormController implements Initializable {
 
 
 
-    public void ResetAction(ActionEvent actionEvent) {
+    public void ResetAction(ActionEvent actionEvent) throws IOException {
 
         try {
             if (txtNewPass.getText().equals(txtRePassWord.getText())){
@@ -62,7 +62,7 @@ public class ResetFormController implements Initializable {
                         txtNewPass.setText("");
                         txtRePassWord.setText("");
                         txtOTPCode.setText("");
-                        sceneSwitch.switchScene(txtRePass, "welcomeForm.fxml");
+                        sceneSwitch.switchScene(Anchor, "welcomeForm.fxml");
 
                     }
                 }else {

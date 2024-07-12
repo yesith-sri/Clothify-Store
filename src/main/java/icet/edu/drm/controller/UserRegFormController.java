@@ -90,7 +90,6 @@ public class UserRegFormController implements Initializable {
                 txtAddress.setText("");
                 txtName.setText("");
                 txtEmail.setText("");
-                Table1.setItems(userBoImpl.getAllUsers());
             }
 
         } else {
